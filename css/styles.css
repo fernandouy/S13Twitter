@@ -285,16 +285,7 @@ body {
 }
 
 .home .feed .tweets {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: grid;
   font-size: 15px;
   width: 100%;
   line-height: 1.75rem;
@@ -304,6 +295,7 @@ body {
 
 .home .feed .tweets .profile-pic {
   display: block;
+  grid-area: 1 / 1;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -311,23 +303,12 @@ body {
 }
 
 .home .feed .tweets .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  grid-area: 1 / span 2;
 }
 
 .home .feed .tweets .content .names {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  grid-area: 1 / 2;
 }
 
 .home .feed .tweets .content .names .full-name {
@@ -340,6 +321,16 @@ body {
   padding-right: 10px;
   font-size: 1.05rem;
   font-weight: 400;
+}
+
+.home .feed .tweets .tweet-content {
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+.home .feed .tweets .tweet-icons {
+  grid-area: 3 / span 3;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .home .right-bar .search-box {
